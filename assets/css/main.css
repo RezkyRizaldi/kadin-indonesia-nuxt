@@ -1,0 +1,82 @@
+:root {
+  --primary-blue: #0c0a83;
+  --charcoal-blue: #262f36;
+}
+
+.bg_charcoal_blue {
+  background-color: var(--charcoal-blue);
+}
+
+.bg_primary_blue {
+  background-color: var(--primary-blue);
+}
+
+* {
+  scroll-behavior: smooth;
+  /* font-family: product-sans, sans-serif; */
+  text-size-adjust: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  user-select: none;
+  object-fit: cover;
+  -webkit-user-drag: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  /* font-family: "Poppins", sans-serif; */
+  font-size: 15px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev .carousel-control-prev-icon,
+.carousel-control-next .carousel-control-next-icon {
+  background-size: 50%;
+  background-color: var(--charcoal-blue);
+  opacity: 0.5;
+}
+
+.swiper-slide {
+  height: initial;
+}
+
+.swiper-slide img {
+  display: block;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-img-top {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Below 1200px */
+@media screen and (max-width: 1200px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 7%;
+  }
+}
+
+/* Below 1024px */
+@media screen and (max-width: 1024px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 9%;
+  }
+}
