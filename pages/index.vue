@@ -1,7 +1,10 @@
 <template>
   <!-- <Tutorial/> -->
 
-  <Navbar />
+  <div>
+    <Navbar />
+    <Heroes />
+  </div>
 </template>
 
 <script>

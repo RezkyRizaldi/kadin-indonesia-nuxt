@@ -1,82 +1,403 @@
 :root {
-  --primary-blue: #0c0a83;
-  --charcoal-blue: #262f36;
+    --primary-blue: #0c0a83;
+    --charcoal-blue: #262f36;
+}
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('~assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('~assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('~assets/fonts/Roboto-Bold.ttf') format('truetype');
 }
 
 .bg_charcoal_blue {
-  background-color: var(--charcoal-blue);
+    background-color: var(--charcoal-blue);
 }
 
 .bg_primary_blue {
-  background-color: var(--primary-blue);
+    background-color: var(--primary-blue);
+}
+
+.btn_primary_blue {
+    color: #fff;
+    background-color: var(--primary-blue);
+    outline: 0;
+    border: 0;
+}
+
+.btn_primary_blue:hover {
+    color: var(--primary-blue);
+    background-color: #fff;
 }
 
 * {
-  scroll-behavior: smooth;
-  /* font-family: product-sans, sans-serif; */
-  text-size-adjust: 100%;
-  transition: 0.3s ease-in-out;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    text-size-adjust: 100%;
 }
 
 body {
-  overflow-x: hidden;
+    transition: 0.3s ease-in-out;
+    overflow-x: hidden;
 }
 
 img {
-  user-select: none;
-  object-fit: cover;
-  -webkit-user-drag: none;
+    user-select: none;
+    object-fit: cover;
+    -webkit-user-drag: none;
 }
 
 a {
-  text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
 }
 
 p {
-  /* font-family: "Poppins", sans-serif; */
-  font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.navbar-brand {
+    font-size: 1rem;
+}
+
+.carousel-item img {
+    height: 100%;
+    max-height: 680px;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%;
+    width: 8%;
 }
 
 .carousel-control-prev .carousel-control-prev-icon,
 .carousel-control-next .carousel-control-next-icon {
-  background-size: 50%;
-  background-color: var(--charcoal-blue);
-  opacity: 0.5;
+    background-size: 50%;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-caption {
+    left: 6%;
+    bottom: 120px;
+    padding-top: 0;
+}
+
+.text {
+    margin-top: 1rem;
 }
 
 .swiper-slide {
-  height: initial;
+    height: initial;
 }
 
 .swiper-slide img {
-  display: block;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-img-top {
-  width: 100%;
-  object-fit: cover;
+    width: 100%;
+    object-fit: cover;
 }
+
+.dropdown-toggle::after {
+    margin-left: 0.4em !important;
+    vertical-align: 0.15em !important;
+    transition: 0.3s ease;
+}
+
+.dropdown-toggle[aria-expanded='true']::after {
+    transform: rotate(180deg);
+}
+
+#membershipDropdownHeaderLabel.dropdown-header,
+#registryDropdownHeaderLabel.dropdown-header {
+    padding-left: 0 !important;
+}
+
+.dropdown-header {
+    color: #6c757d;
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-divider {
+    border-color: rgba(0, 0, 0, 0.15);
+    background-color: #dee2e6;
+    opacity: 0.25;
+    color: inherit;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+    color: #dee2e6;
+}
+
+
+/* Below 1440px */
+
+@media screen and (max-width: 1439.98px) {
+    .carousel-item img {
+        max-height: 570px;
+    }
+    .carousel-caption {
+        bottom: 65px;
+    }
+}
+
 
 /* Below 1200px */
-@media screen and (max-width: 1200px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 7%;
-  }
+
+@media screen and (max-width: 1199.98px) {
+    .carousel-item img {
+        max-height: 490px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 9%;
+    }
+    .carousel-control-prev .carousel-control-prev-icon,
+    .carousel-control-next .carousel-control-next-icon {
+        background-size: 40%;
+    }
+    .carousel-caption {
+        bottom: 25px;
+    }
 }
 
+
 /* Below 1024px */
-@media screen and (max-width: 1024px) {
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 9%;
-  }
+
+@media screen and (max-width: 1023.98px) {
+    .carousel-item img {
+        max-height: 470px;
+    }
+    .carousel-caption {
+        bottom: 10px;
+    }
+}
+
+
+/* Below 992px */
+
+@media screen and (max-width: 991.98px) {
+    .carousel-item img {
+        max-height: 360px;
+    }
+    .carousel-control-prev .carousel-control-prev-icon,
+    .carousel-control-next .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .carousel-caption {
+        bottom: -40px;
+        width: 90%;
+    }
+    .display-3 {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* Below 768px */
+
+@media screen and (max-width: 767.98px) {
+    .carousel-item img {
+        max-height: 300px;
+    }
+    .carousel-caption {
+        bottom: -70px;
+    }
+    .display-3 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Below 640px */
+
+@media screen and (max-width: 639.98px) {
+    .carousel-item img {
+        max-height: 270px;
+    }
+    .carousel-caption {
+        bottom: -80px;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+}
+
+
+/* Below 576px */
+
+@media screen and (max-width: 575.98px) {
+    .carousel-item img {
+        max-height: 230px;
+    }
+    .carousel-control-prev .carousel-control-prev-icon,
+    .carousel-control-next .carousel-control-next-icon {
+        background-size: 30%;
+        width: 30px;
+        height: 30px;
+    }
+    .carousel-indicators {
+        bottom: -10px;
+    }
+    .carousel-caption {
+        bottom: -50px;
+        left: 7%;
+    }
+    .display-3 {
+        font-size: 1.5rem;
+    }
+    .lead {
+        margin-bottom: 0;
+    }
+    .text,
+    .text+a {
+        font-size: 12px;
+    }
+}
+
+
+/* Below 480px */
+
+@media screen and (max-width: 479.98px) {
+    .carousel-item img {
+        max-height: 200px;
+    }
+    .carousel-caption {
+        bottom: -50px;
+    }
+    .display-3 {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+    .lead {
+        font-size: 0.75rem;
+    }
+    .text {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .text,
+    .text+a {
+        font-size: 10px;
+    }
+}
+
+
+/* Below 425px */
+
+@media screen and (max-width: 424.98px) {
+    .carousel-item img {
+        max-height: 190px;
+    }
+}
+
+
+/* Below 414px */
+
+@media screen and (max-width: 413.98px) {
+    .carousel-caption {
+        bottom: -50px;
+    }
+}
+
+
+/* Below 400px */
+
+@media screen and (max-width: 399.98px) {
+    .carousel-item img {
+        max-height: 170px;
+    }
+    .carousel-caption {
+        bottom: -55px;
+    }
+    .display-3 {
+        font-size: 1rem;
+    }
+    .lead {
+        font-size: 0.7rem;
+    }
+    .text,
+    .text+a {
+        font-size: 8px;
+    }
+}
+
+
+/* Below 375px */
+
+@media screen and (max-width: 374.98px) {
+    .carousel-control-prev .carousel-control-prev-icon,
+    .carousel-control-next .carousel-control-next-icon {
+        background-size: 25%;
+        width: 25px;
+        height: 25px;
+    }
+    .carousel-item img {
+        max-height: 150px;
+    }
+    .carousel-caption {
+        bottom: -60px;
+    }
+    .display-3 {
+        font-size: 0.75rem;
+    }
+    .lead {
+        font-size: 0.5rem;
+    }
+    .text {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .text,
+    .text+a {
+        font-size: 7px;
+    }
 }
